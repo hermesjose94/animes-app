@@ -1,0 +1,28 @@
+@import "../Vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+  font-family: $sans-font;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.content__app {
+  margin-top: 50px;
+}
+
+.container-noResult {
+  width: 90%;
+  margin: auto;
+  height: calc(100vh - 180px);
+  padding: 0 17px;
+}

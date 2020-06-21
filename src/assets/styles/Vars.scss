@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Open+Sans:wght@400;600&display=swap');
+@import '~bootstrap/scss/bootstrap';
+
+//Fonts
+$bebas-font: 'Bebas Neue', cursive;
+$sans-font: 'Open Sans', sans-serif;
+$montserrat-font: 'Montserrat', sans-serif;
+
+//Colors
+$blue: #2b2d42;
+$gray: #8d99ae;
+$Lgray: #dcdcdc;
+$white: #edf2f4;
+$red: #ff0562;
+$Dred: #d00d56;
+$negro: #111111;
+$purple: #2f2050;
+$blue2: #1c394c;
+$blueHover: #339af0;
+
+$transform: transform 300ms ease 100ms;
+$gradiant: linear-gradient(45deg, $purple, $blue2);
+
+//Media querys
+$escritorio_gra: 1920px;
+$escritorio_med: 1440px;
+$escritorio_peq: 900px;
+$media: 800px;
+$movil_gra: 720px;
+$movil_med: 375px;
+$movil_peq: 300px;
+
+@function em($pixels, $context: 16) {
+  @return #{$pixels/$context}em;
+}
+
+@function color-opacity($color: #000, $opacity: 0.5) {
+  @return rgba($color, $opacity);
+}
+
+@function vw($pixels, $context: 16) {
+  @return ($pixels / $context) * 100vw;
+}
+
+@mixin flex(
+  $direction: null,
+  $align: null,
+  $justify: null,
+  $wrap: null,
+  $flow: null
+) {
+  display: flex !important;
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $align {
+    align-items: $align;
+  }
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+  @if $flow {
+    flex-flow: $flow;
+  }
+}

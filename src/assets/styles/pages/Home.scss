@@ -1,0 +1,14 @@
+@import "../Vars.scss";
+
+.container-home {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0.5rem;
+  h1 {
+    color: $blue;
+    font-family: $bebas-font;
+    border-bottom: 1px solid $blue;
+    margin-top: 20px;
+  }
+}

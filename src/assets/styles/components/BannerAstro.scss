@@ -1,0 +1,12 @@
+@import "../Vars.scss";
+
+.container__banner {
+  width: 100%;
+  height: calc(100vh - 50px);
+  overflow: hidden;
+  background: url("../../images/background.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

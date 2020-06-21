@@ -1,0 +1,68 @@
+@import "../Vars.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.background-error {
+  background: $gradiant;
+  height: 100vh;
+  font-family: $montserrat-font;
+}
+
+.container-error {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  border-radius: 10px;
+
+  @include flex(
+    $direction: null,
+    $align: center,
+    $justify: center,
+    $wrap: null,
+    $flow: null
+  );
+  background: url("../../images/p404.png") #151729;
+  box-shadow: 0 15px 30px color-opacity();
+  .content {
+    max-width: 600px;
+    text-align: center;
+    h2 {
+      font-weight: 600;
+      font-size: 10vw;
+      color: $white;
+      line-height: 1em;
+    }
+    h4 {
+      position: relative;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #111;
+      background: $white;
+      font-weight: 300;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+    p {
+      color: $white;
+      font-size: 1.2em;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      padding: 10px 25px;
+      background: $red;
+      color: $white;
+      text-decoration: none;
+      margin-top: 25px;
+      border-radius: 25px;
+      border-bottom: 4px solid $Dred;
+      &:hover {
+        background: $Dred;
+      }
+    }
+  }
+}

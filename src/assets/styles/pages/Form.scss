@@ -1,0 +1,26 @@
+@import "../Vars.scss";
+
+.background-form {
+  background-color: $Lgray;
+}
+
+.container__form {
+  background-color: $white;
+  width: 80%;
+  min-height: 100px;
+  color: $blue;
+  font-family: $montserrat-font;
+  overflow: hidden;
+  margin: 100px auto;
+  border-radius: 5px;
+  padding: 0 20px;
+  .container__form--title {
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .img-thumbnail {
+    max-height: 30vh;
+  }
+}

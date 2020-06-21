@@ -1,0 +1,21 @@
+@import "../Vars.scss";
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3333%);
+}
+
+@media (max-width: $escritorio_peq) {
+  .content-wrapper {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (max-width: $movil_med) {
+  .content-wrapper {
+    grid-template-columns: 100%;
+  }
+}

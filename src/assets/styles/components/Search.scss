@@ -1,0 +1,50 @@
+@import "../Vars.scss";
+
+.box__search {
+  margin: 100px auto 30px auto;
+  max-width: 1200px;
+  height: 50px;
+  padding: 0 17px;
+}
+
+.box__search__container {
+  width: 100%;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  input {
+    width: 100%;
+    height: 50px;
+    background: $blue;
+    border: none;
+    font-size: 14px;
+    float: left;
+    color: $white;
+    padding-left: 45px;
+    border-radius: 5px;
+    &::placeholder {
+      color: $white;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 13px;
+    z-index: 1;
+    color: $white;
+    transition: all 0.55s ease;
+  }
+  &:hover .icon {
+    color: $red;
+    transform: scale(1.5);
+  }
+}

@@ -1,0 +1,69 @@
+@import "../Vars.scss";
+
+.banner {
+  font-size: 16px;
+  color: $white;
+  background: $gradiant;
+  margin: 0;
+  margin-bottom: em(50, 16);
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  img {
+    display: block;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    min-height: em(400, 16);
+    max-height: em(500, 16);
+  }
+  .container {
+    @include flex($direction: column, $align: flex-start, $justify: flex-end);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    margin-bottom: em(20, 16);
+  }
+  .title {
+    font-weight: 600;
+    font-size: em(50, 16);
+    margin-bottom: em(20, 50);
+  }
+  .description {
+    font-weight: normal;
+    font-size: em(16, 16);
+    line-height: em(28, 16);
+    max-width: 50%;
+    margin-bottom: em(20, 16);
+  }
+  .button {
+    background-color: color-opacity();
+    border: none;
+    border-radius: em(5, 16);
+    padding: em(15) em(30);
+    color: white;
+    margin-right: em(20);
+    cursor: pointer;
+    transition: 0.3s ease all;
+    font-size: em(18);
+    &:hover {
+      background-color: $white;
+      color: #000;
+    }
+    svg {
+      margin-right: em(20);
+    }
+  }
+}
+
+@media screen and (max-width: $media) {
+  .banner {
+    font-size: 14px;
+    .description {
+      max-width: 100%;
+    }
+  }
+}
