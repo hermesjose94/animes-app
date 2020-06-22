@@ -93,14 +93,14 @@ const Header = ({
     );
     if (error) {
       setError(error);
-      setUser(null);
       setIsAuthenticated(false);
+      setUser(null);
       setLoading(false);
     } else {
       setToken(null);
       setExpitedAt(null);
-      setUser(null);
       setIsAuthenticated(false);
+      setUser(null);
       setLoading(false);
       history.push('/');
     }

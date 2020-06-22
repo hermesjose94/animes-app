@@ -10,7 +10,7 @@ const Fetch = async (type, endpoint, body, token, auth) => {
 
   const headers = {
     'Content-Type': 'application/json',
-    // Accept: "application/json",
+    Accept: 'application/json',
   };
 
   if (token) {
@@ -33,7 +33,10 @@ const Fetch = async (type, endpoint, body, token, auth) => {
   await axios(config)
     .then(async (res) => {
       response = await res.data;
-      console.log(response);
+      if (Config.DEV) {
+        console.log(url);
+        console.log(response);
+      }
     })
     .catch((err) => {
       if (err.response) {
