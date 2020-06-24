@@ -3,4 +3,4 @@
   # This is where we will look for package.json/.nvmrc/etc.
   #base = "packages/gasby-site"
   #publish = "/public"
-  command = "npm build"
+  command = "npm run build"
